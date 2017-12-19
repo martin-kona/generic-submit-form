@@ -17,5 +17,10 @@
 
     <aura:method name="navigateToSObject" action="{!c.doNavigateToSObject}">
         <aura:attribute name="recordId" type="String"/>       
-    </aura:method>     
+    </aura:method>  
+
+    <aura:method name="isFunction" action="{!c.doIsFunction}">
+        <aura:attribute name="obj" type="Object"/>       
+    </aura:method>  
+
 </aura:component>

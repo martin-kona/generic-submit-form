@@ -1,6 +1,7 @@
 <aura:component controller="RecordSubmissionFormController" implements="force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId">
     
     <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="formConfiguration" type="Object"/>
     
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     

@@ -18,5 +18,12 @@
         var params = event.getParam("arguments");
         
 		helper.navigateToSObject(params.recordId);
-	}	
+	},
+
+	doIsFunction : function(component, event, helper) {
+        
+        var params = event.getParam("arguments");
+        
+		helper.isFunction(params.obj);
+	}
 })

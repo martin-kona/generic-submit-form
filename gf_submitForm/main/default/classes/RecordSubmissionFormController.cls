@@ -13,6 +13,9 @@ public with sharing class RecordSubmissionFormController {
 	 */
 	@AuraEnabled
 	public static String getFormDataConfiguration(String recordId) {
-		return recordId; 
+		//return recordId; 
+
+
+		return '{ "label" : fieldLabel, "value" : cmp.getReference("{!v." + dataWrapperObjectPrefix + "." + mdt.Field_Name_API__c + "}"';
 	}
 }

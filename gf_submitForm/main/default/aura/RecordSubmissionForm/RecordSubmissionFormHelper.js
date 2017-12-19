@@ -6,6 +6,10 @@
 			recordId : cmp.get('v.recordId')
 		};		
 
-		calloutUtils.invokeApexCallout(cmp, 'c.getFormDataConfiguration', calloutParams);
+		calloutUtils.invokeApexCallout(cmp, 'c.getFormDataConfiguration', calloutParams, helper.getDataConfigurationSuccessHandler);
+	},
+
+	getDataConfigurationSuccessHandler : function(cmp, responseValue) {
+		alert(responseValue);
 	}
 })

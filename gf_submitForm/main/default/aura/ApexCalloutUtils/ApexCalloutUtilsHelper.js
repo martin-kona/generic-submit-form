@@ -15,14 +15,16 @@
         
         action.setCallback(this, function(response) {
 
-            var state = response.getState();      
+            var state = response.getState();
+
+            var majorUtils = thisCmp.find("MajorUtils");      
 
             if (state === successState) {
 
                 var returnValue = response.getReturnValue();
                 
-                if (successHandler) {
-                    successHandler(returnValue);
+                if (majorUtils.isFunction(successHandler)) {
+                    successHandler(cmp, returnValue);
                 } else {
                     this.defaultSuccessStateHandler(cmp, thisCmp, returnValue);
                 }                
@@ -34,8 +36,8 @@
 
                 var errors = response.getError();
                 
-                if (errorHandler) {
-                    errorHandler(errors);
+                if (majorUtils.isFunction(errorHandler)) {
+                    errorHandler(cmp, errors);
                 } else {
                     this.defaultErrorStateHandler(cmp, thisCmp, apexMethodName, errors);
                 }
