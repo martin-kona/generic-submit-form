@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="successState" type="String" default="SUCCESS" access="private"/>
+    <aura:attribute name="errorState" type="String" default="INCOMPLETE" access="private"/>
+    <aura:attribute name="incompleteState" type="String" default="ERROR" access="private"/>	
+    
+    <aura:method name="invokeApexCallout" action="{!c.doInvokeApexCallout}">
+        <aura:attribute name="cmp" type="Component"/>
+        <aura:attribute name="apexMethodName" type="String"/>
+        <aura:attribute name="apexMethodParameters" type="Object"/>
+        <aura:attribute name="successHandler" type="function"/>
+        <aura:attribute name="errorHandler" type="function"/>
+        <aura:attribute name="isStorable" type="Boolean"/>
+        <aura:attribute name="isAbortable" type="Boolean"/>
+        <aura:attribute name="isBackground" type="Boolean"/>
+    </aura:method>
+
+    <c:MajorUtils aura:id="MajorUtils"/>    
+</aura:component>

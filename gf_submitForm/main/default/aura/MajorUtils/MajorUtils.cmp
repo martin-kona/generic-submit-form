@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:method name="displayToast" action="{!c.doDisplayToast}">
+        <aura:attribute name="cmp" type="Component"/>
+        <aura:attribute name="type" type="String"/>
+        <aura:attribute name="message" type="String"/>
+        <aura:attribute name="mode" type="String"/>          
+        <aura:attribute name="messageTemplate" type="String"/>
+        <aura:attribute name="templateData" type="String"/>       
+    </aura:method>  
+
+    <aura:method name="displayPopUpModal" action="{!c.doDisplayPopUpModal}">
+        <aura:attribute name="cmp" type="Component"/>
+        <aura:attribute name="type" type="String"/>
+        <aura:attribute name="title" type="String"/>
+        <aura:attribute name="message" type="String"/>      
+    </aura:method>  
+
+    <aura:method name="navigateToSObject" action="{!c.doNavigateToSObject}">
+        <aura:attribute name="recordId" type="String"/>       
+    </aura:method>     
+</aura:component>
