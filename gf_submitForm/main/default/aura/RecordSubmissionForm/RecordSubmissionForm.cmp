@@ -1,14 +1,23 @@
 <aura:component controller="RecordSubmissionFormController" implements="force:appHostable,force:lightningQuickActionWithoutHeader,force:hasRecordId">
     
     <aura:attribute name="recordId" type="String"/>
-    <aura:attribute name="formConfiguration" type="List"/>
+    <aura:attribute name="formConfiguration" type="Object"/>
     
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     
     <c:ApexCalloutUtils aura:id="ApexCalloutUtils"/>
     
-	<aura:iteration items="{!v.formConfiguration}" var="formSection">		
-		<meter value="{!formSection /5}"/><br/>
+
+	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="formSection">	
+		<lightning:card title="{!formSection.sectionName}" >
+			<!-- set icon -->
+			<!-- set toogle button -->
+			<lightning:input type="number" name="number" label="Number" value="12345"/>
+			<lightning:input type="number" name="number" label="Number" value="12345"/>
+			<lightning:input type="number" name="number" label="Number" value="12345"/>
+			<lightning:input type="number" name="number" label="Number" value="12345"/>
+			<lightning:input type="number" name="number" label="Number" value="12345"/>
+		</lightning:card>	
 	</aura:iteration>
 
 </aura:component>

@@ -11,8 +11,6 @@
 
 	getDataConfigurationSuccessHandler : function(cmp, responseValue) {
 
-		var formConfiguration = JSON.parse(responseValue);
-		
-		cmp.set('v.formConfiguration', formConfiguration);
+		cmp.set('v.formConfiguration', responseValue);				
 	}
 })

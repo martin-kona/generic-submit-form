@@ -21,13 +21,28 @@
 
             if (state === successState) {
 
-                var returnValue = response.getReturnValue();                                                                                          
+                var returnValue = response.getReturnValue();    
 
-                if (majorUtils.isFunction(successHandler)) {
-                    successHandler(cmp, returnValue);
-                } else {
-                    this.defaultSuccessStateHandler(cmp, thisCmp, returnValue);
-                }                
+                // TODO: first check if that property even exists
+                if (returnValue.isSuccess) {
+
+                    if (majorUtils.isFunction(successHandler)) {
+
+                        successHandler(cmp, returnValue);
+
+                    } else {
+                        this.defaultSuccessStateHandler(cmp, thisCmp, returnValue);
+                    }  
+                } else {                
+
+                    if (majorUtils.isFunction(errorHandler)) {
+
+                        errorHandler(cmp, returnValue.message);
+
+                    } else {
+                        this.defaultErrorStateHandler(cmp, thisCmp, apexMethodName, returnValue.message);
+                    }
+                }                                                                                              
                 
             } else if (state === incompleteState) {
 

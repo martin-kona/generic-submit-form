@@ -1,6 +1,9 @@
 public class DynamicFormSectionConfiguration {
     
     @AuraEnabled
-    public String section;
+    public String sectionName;
 
+    public DynamicFormSectionConfiguration(String sectionName) {
+    	this.sectionName = sectionName;    
+    }
 }
