@@ -12,10 +12,33 @@ public with sharing class RecordSubmissionFormController {
 	 * @return form configuration data, which defines sections and fields with security settings and data	 
 	 */
 	@AuraEnabled
-	public static String getFormDataConfiguration(String recordId) {
-		//return recordId; 
+	public static DynamicFormSectionConfigurationWrapper getFormDataConfiguration(String recordId) {
+		
+        DynamicFormSectionConfigurationWrapper configurationWrapper;       
+        
+        try {
+        	List<DynamicFormSectionConfiguration> sectionConfigurations = new DynamicFormHandler().getFormConfiguration(recordId);  
+            configurationWrapper = new DynamicFormSectionConfigurationWrapper(true, DynamicFormConstants.SUCCESS, sectionConfigurations);
+        } catch (Exception e) {
+            configurationWrapper = new DynamicFormSectionConfigurationWrapper(false, e.getMessage(), NULL);            
+        }        
 
-
-		return '[2,3,4,5]';
+		return configurationWrapper;
 	}
+    
+    public class DynamicFormSectionConfigurationWrapper {
+        
+        @AuraEnabled
+        public Boolean isSuccess;
+        @AuraEnabled
+		public String message;
+        @AuraEnabled
+        public List<DynamicFormSectionConfiguration> sectionConfigurations;
+        
+        public DynamicFormSectionConfigurationWrapper(Boolean isSuccess, String message, List<DynamicFormSectionConfiguration> sectionConfigurations) {
+        	this.isSuccess = isSuccess;
+            this.message = message;
+            this.sectionConfigurations = sectionConfigurations;
+        }
+    }
 }

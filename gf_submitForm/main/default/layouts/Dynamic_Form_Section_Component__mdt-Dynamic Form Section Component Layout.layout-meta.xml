@@ -26,6 +26,10 @@
                 <behavior>Edit</behavior>
                 <field>sObject_Field__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Is_Rendered__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
