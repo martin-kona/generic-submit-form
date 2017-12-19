@@ -1,0 +1,8 @@
+<aura:component >
+
+	<aura:attribute name="formConfiguration" type="Object" description="Data and security configuration"/>
+
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>	
+
+
+</aura:component>
