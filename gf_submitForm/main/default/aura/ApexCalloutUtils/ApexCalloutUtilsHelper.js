@@ -21,8 +21,8 @@
 
             if (state === successState) {
 
-                var returnValue = response.getReturnValue();
-                
+                var returnValue = response.getReturnValue();                                                                                          
+
                 if (majorUtils.isFunction(successHandler)) {
                     successHandler(cmp, returnValue);
                 } else {

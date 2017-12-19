@@ -24,6 +24,6 @@
         
         var params = event.getParam("arguments");
         
-		helper.isFunction(params.obj);
+		return helper.isFunction(params.obj);
 	}
 })

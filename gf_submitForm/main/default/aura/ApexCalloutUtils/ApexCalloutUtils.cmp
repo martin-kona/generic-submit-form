@@ -7,8 +7,8 @@
         <aura:attribute name="cmp" type="Component"/>
         <aura:attribute name="apexMethodName" type="String"/>
         <aura:attribute name="apexMethodParameters" type="Object"/>
-        <aura:attribute name="successHandler" type="function"/>
-        <aura:attribute name="errorHandler" type="function"/>
+        <aura:attribute name="successHandler" type="Function"/>
+        <aura:attribute name="errorHandler" type="Function"/>
         <aura:attribute name="isStorable" type="Boolean"/>
         <aura:attribute name="isAbortable" type="Boolean"/>
         <aura:attribute name="isBackground" type="Boolean"/>

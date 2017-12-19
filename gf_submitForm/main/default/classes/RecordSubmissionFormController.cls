@@ -16,6 +16,6 @@ public with sharing class RecordSubmissionFormController {
 		//return recordId; 
 
 
-		return '{ "label" : fieldLabel, "value" : cmp.getReference("{!v." + dataWrapperObjectPrefix + "." + mdt.Field_Name_API__c + "}"';
+		return '{ "label" : "Example label", "value" : 10}';
 	}
 }
