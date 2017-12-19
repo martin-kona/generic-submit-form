@@ -16,7 +16,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>sObject__c</field>
+                <field>Dynamic_Form_Type__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -57,6 +57,12 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
+    <relatedLists>
+        <fields>MasterLabel</fields>
+        <fields>DeveloperName</fields>
+        <fields>NamespacePrefix</fields>
+        <relatedList>Dynamic_Form_Section_Component__mdt.Dynamic_Form_Section__c</relatedList>
+    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>

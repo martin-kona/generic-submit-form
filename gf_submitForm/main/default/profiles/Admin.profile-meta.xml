@@ -5,11 +5,27 @@
         <enabled>true</enabled>
     </classAccesses>
     <custom>false</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Dynamic_Form_Section_Component__mdt.sObject_Field__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Dynamic_Form_Section_Component__mdt.sObject__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
     <layoutAssignments>
         <layout>Account-Account Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Dynamic_Form_Meta__mdt-Dynamic Form Type Layout</layout>
+        <layout>Dynamic_Form_Section_Component__mdt-Dynamic Form Section Component Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Dynamic_Form_Section__mdt-Dynamic Form Section Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Dynamic_Form__mdt-Dynamic Form Type Layout</layout>
     </layoutAssignments>
     <userLicense>Salesforce</userLicense>
     <userPermissions>

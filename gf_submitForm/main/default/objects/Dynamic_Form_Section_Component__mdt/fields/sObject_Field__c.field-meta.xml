@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sObject_Field__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>sObject Field</label>
+    <metadataRelationshipControllingField>Dynamic_Form_Section_Component__mdt.sObject__c</metadataRelationshipControllingField>
+    <referenceTo>FieldDefinition</referenceTo>
+    <relationshipLabel>Dynamic_Form_Section_Components</relationshipLabel>
+    <relationshipName>Dynamic_Form_Section_Components</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>
