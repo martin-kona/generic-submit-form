@@ -16,6 +16,6 @@ public with sharing class RecordSubmissionFormController {
 		//return recordId; 
 
 
-		return '{ "label" : "Example label", "value" : 10}';
+		return '[2,3,4,5]';
 	}
 }
