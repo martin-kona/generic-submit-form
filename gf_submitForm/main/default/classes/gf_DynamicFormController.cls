@@ -23,7 +23,7 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEAL
 *
 * @description Main record submission controller for dynamic form
 */
-public with sharing class RecordSubmissionFormController {
+public with sharing class gf_DynamicFormController {
 
 	/**
 	 * @description Generates form configuration used for dynamic components rendering
