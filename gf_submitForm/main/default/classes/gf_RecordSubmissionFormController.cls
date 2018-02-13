@@ -31,30 +31,30 @@ public with sharing class RecordSubmissionFormController {
 	 * @return form configuration data, which defines sections and fields with security settings and data	 
 	 */
 	@AuraEnabled
-	public static DynamicFormSectionConfigurationWrapper getFormDataConfiguration(String recordId) {
+	public static gf_DynamicFormSectionConfigurationWrapper getFormDataConfiguration(String recordId) {
 		
         DynamicFormSectionConfigurationWrapper configurationWrapper;       
         
         try {
-        	List<DynamicFormSectionConfiguration> sectionConfigurations = new DynamicFormHandler().getFormConfiguration(recordId);  
-            configurationWrapper = new DynamicFormSectionConfigurationWrapper(true, DynamicFormConstants.SUCCESS, sectionConfigurations);
+        	List<gf_DynamicFormSectionConfiguration> sectionConfigurations = new gf_DynamicFormHandler().getFormConfiguration(recordId);
+            configurationWrapper = new gf_DynamicFormSectionConfigurationWrapper(true, gf_DynamicFormConstants.SUCCESS, sectionConfigurations);
         } catch (Exception e) {
-            configurationWrapper = new DynamicFormSectionConfigurationWrapper(false, e.getMessage(), NULL);            
+            configurationWrapper = new gf_DynamicFormSectionConfigurationWrapper(false, e.getMessage(), NULL);
         }        
 
 		return configurationWrapper;
 	}
     
-    public class DynamicFormSectionConfigurationWrapper {
+    public class gf_DynamicFormSectionConfigurationWrapper {
         
         @AuraEnabled
         public Boolean isSuccess;
         @AuraEnabled
 		public String message;
         @AuraEnabled
-        public List<DynamicFormSectionConfiguration> sectionConfigurations;
+        public List<gf_DynamicFormSectionConfiguration> sectionConfigurations;
         
-        public DynamicFormSectionConfigurationWrapper(Boolean isSuccess, String message, List<DynamicFormSectionConfiguration> sectionConfigurations) {
+        public gf_DynamicFormSectionConfigurationWrapper(Boolean isSuccess, String message, List<gf_DynamicFormSectionConfiguration> sectionConfigurations) {
         	this.isSuccess = isSuccess;
             this.message = message;
             this.sectionConfigurations = sectionConfigurations;

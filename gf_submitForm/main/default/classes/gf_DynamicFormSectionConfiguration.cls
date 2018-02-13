@@ -16,17 +16,12 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-public class DynamicFormConfigurationManagerImpl implements DynamicFormConfigurationManager {
+public class gf_DynamicFormSectionConfiguration {
+    
+    @AuraEnabled
+    public String sectionName;
 
-    public List<DynamicFormSectionConfiguration> getFormDataConfiguration(Id recordId) {
-        
-        List<DynamicFormSectionConfiguration> sectionConfigurations = new List<DynamicFormSectionConfiguration>();
-        
-        sectionConfigurations.add(new DynamicFormSectionConfiguration('Section 1'));
-        sectionConfigurations.add(new DynamicFormSectionConfiguration('Section 2'));
-        sectionConfigurations.add(new DynamicFormSectionConfiguration('Section 3'));
-        sectionConfigurations.add(new DynamicFormSectionConfiguration('Section 4'));        
-        
-        return sectionConfigurations;
+    public gf_DynamicFormSectionConfiguration(String sectionName) {
+    	this.sectionName = sectionName;    
     }
 }
