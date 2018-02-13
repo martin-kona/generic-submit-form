@@ -16,6 +16,13 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
 ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
+
+/**
+* @author Martin Kona
+* @date February 2018
+*
+* @description Dynamic form handler, where we can inject specific configuration manager to query the form configuration
+*/
 public class gf_DynamicFormHandler {
     
     gf_DynamicFormConfigurationManager configurationManager;
