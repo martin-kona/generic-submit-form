@@ -33,7 +33,7 @@ public with sharing class gf_DynamicFormController {
 	@AuraEnabled
 	public static gf_DynamicFormSectionConfigurationWrapper getFormDataConfiguration(String recordId) {
 		
-        DynamicFormSectionConfigurationWrapper configurationWrapper;       
+        gf_DynamicFormSectionConfigurationWrapper configurationWrapper;
         
         try {
         	List<gf_DynamicFormSectionConfiguration> sectionConfigurations = new gf_DynamicFormHandler().getFormConfiguration(recordId);

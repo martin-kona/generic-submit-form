@@ -27,7 +27,7 @@ public class gf_DynamicFormConfigurationManagerImpl implements gf_DynamicFormCon
 
     public List<gf_DynamicFormSectionConfiguration> getFormDataConfiguration(Id recordId) {
 
-        gf_List<DynamicFormSectionConfiguration> sectionConfigurations = new List<DynamicFormSectionConfiguration>();
+        List<gf_DynamicFormSectionConfiguration> sectionConfigurations = new List<gf_DynamicFormSectionConfiguration>();
         
         sectionConfigurations.add(new gf_DynamicFormSectionConfiguration('Section 1'));
         sectionConfigurations.add(new gf_DynamicFormSectionConfiguration('Section 2'));

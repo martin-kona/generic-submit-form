@@ -32,7 +32,7 @@ public class gf_DynamicFormHandler {
     }
     
     public gf_DynamicFormHandler() {
-        this(new DynamicFormConfigurationManagerImpl());
+        this(new gf_DynamicFormConfigurationManagerImpl());
     }
 
     public List<gf_DynamicFormSectionConfiguration> getFormConfiguration(String recordId) {
