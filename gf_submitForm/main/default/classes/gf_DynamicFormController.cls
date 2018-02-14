@@ -40,6 +40,8 @@ public with sharing class gf_DynamicFormController {
             configurationWrapper = new gf_DynamicFormSectionConfigurationWrapper(true, gf_DynamicFormConstants.SUCCESS, sectionConfigurations);
         } catch (Exception e) {
             configurationWrapper = new gf_DynamicFormSectionConfigurationWrapper(false, e.getMessage(), NULL);
+
+            // store rather log and return aura exception with user friendly message
         }        
 
 		return configurationWrapper;
