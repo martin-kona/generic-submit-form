@@ -8,15 +8,19 @@
     <c:ApexCalloutUtils aura:id="ApexCalloutUtils"/>
     
 
-	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="formSection">	
-		<lightning:card title="{!formSection.sectionName}" >
-			<!-- set icon -->
-			<!-- set toogle button -->
+	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="formSection">
+        <!--TODO: create as reusable form section-->
+		<lightning:card title="{!formSection.sectionName}" iconName="standard:account">
+
+			<aura:set attribute="actions">
+				<lightning:buttonIcon aura:id="lockButton" iconName="utility:switch" variant="bare"
+									  onclick="{!c.cardToggle}" alternativeText="minimize section" />
+			</aura:set>
+
 			<lightning:input type="number" name="number" label="Number" value="12345"/>
 			<lightning:input type="number" name="number" label="Number" value="12345"/>
 			<lightning:input type="number" name="number" label="Number" value="12345"/>
-			<lightning:input type="number" name="number" label="Number" value="12345"/>
-			<lightning:input type="number" name="number" label="Number" value="12345"/>
+
 		</lightning:card>	
 	</aura:iteration>
 
