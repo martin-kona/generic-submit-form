@@ -6,21 +6,25 @@
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     
     <c:ApexCalloutUtils aura:id="ApexCalloutUtils"/>
-    
+
+
+	<h1>Submit</h1>
 
 	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="formSection">
         <!--TODO: create as reusable form section-->
-		<lightning:card title="{!formSection.sectionName}" iconName="standard:account">
+        <!--TODO: aura:id to be real custom metadata record id passed to cmp-->
+		<lightning:card aura:id="demoId" title="{!formSection.sectionName}" iconName="standard:account">
 
 			<aura:set attribute="actions">
 				<lightning:buttonIcon aura:id="lockButton" iconName="utility:switch" variant="bare"
 									  onclick="{!c.cardToggle}" alternativeText="minimize section" />
 			</aura:set>
 
-			<lightning:input type="number" name="number" label="Number" value="12345"/>
-			<lightning:input type="number" name="number" label="Number" value="12345"/>
-			<lightning:input type="number" name="number" label="Number" value="12345"/>
-
+            <p aura:id="showHideSection">
+				<lightning:input type="number" name="number" label="Number" value="12345"/>
+				<lightning:input type="number" name="number" label="Number" value="12345"/>
+				<lightning:input type="number" name="number" label="Number" value="12345"/>
+            </p>
 		</lightning:card>	
 	</aura:iteration>
 

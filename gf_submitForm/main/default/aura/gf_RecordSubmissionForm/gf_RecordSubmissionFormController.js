@@ -4,7 +4,7 @@
         helper.getDataConfiguration(cmp);
 	},
 
-    cardToggle : function(component, event, helper) {
+    cardToggle : function(component) {
 
         var cardSection = component.find('showHideSection');
         $A.util.toggleClass(cardSection,'slds-is-collapsed');
