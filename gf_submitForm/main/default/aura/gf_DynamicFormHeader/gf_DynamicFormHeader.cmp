@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,
+                            force:lightningQuickActionWithoutHeader,
+                            force:hasRecordId,flexipage:availableForAllPageTypes,
+                            flexipage:availableForRecordHome">
+
+    <aura:attribute name="recordId" type="String"/>
+
+    <lightning:icon iconName="custom:custom18" size="large" alternativeText="Indicates approval"/>
+
+
+    <lightning:picklistPath aura:id="submissionPath" recordId="{!v.recordId}"
+                            variant="linear"
+                            picklistFieldApiName="Type"
+                            onselect="{!c.handlePathSelect}"/>
+</aura:component>

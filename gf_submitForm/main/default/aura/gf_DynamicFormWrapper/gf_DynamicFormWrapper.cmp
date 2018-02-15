@@ -1,2 +1,12 @@
-<aura:component description="gf_DynamicFormWrapper">
+<aura:component implements="force:appHostable,
+                            force:lightningQuickActionWithoutHeader,
+                            force:hasRecordId,flexipage:availableForAllPageTypes,
+                            flexipage:availableForRecordHome">
+
+    <aura:attribute name="recordId" type="String"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <lightning:overlayLibrary aura:id="overlayLib" />
+
 </aura:component>

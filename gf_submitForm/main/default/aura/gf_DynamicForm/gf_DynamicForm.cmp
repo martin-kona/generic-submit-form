@@ -1,7 +1,4 @@
-<aura:component controller="gf_DynamicFormController" implements="force:appHostable,
-																	force:lightningQuickActionWithoutHeader,
-																	force:hasRecordId,flexipage:availableForAllPageTypes,
-																	flexipage:availableForRecordHome">
+<aura:component controller="gf_DynamicFormController" >
     
     <aura:attribute name="recordId" type="String"/>
     <aura:attribute name="formConfiguration" type="Object"/>
@@ -10,12 +7,6 @@
     
     <c:gf_ApexCalloutUtils aura:id="ApexCalloutUtils"/>
 
-
-    <!--<lightning:picklistPath aura:id="submissionPath" recordId="{!v.recordId}"-->
-                            <!--variant="linear"-->
-                            <!--picklistFieldApiName="Type"-->
-                            <!--onselect="{!c.handlePathSelect}">-->
-    <!--</lightning:picklistPath>-->
 
 	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="sectionConfiguration">
 
