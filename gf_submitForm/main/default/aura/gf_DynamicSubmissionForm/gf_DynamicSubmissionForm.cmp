@@ -8,7 +8,7 @@
     
 	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
     
-    <c:ApexCalloutUtils aura:id="ApexCalloutUtils"/>
+    <c:gf_ApexCalloutUtils aura:id="ApexCalloutUtils"/>
 
 
     <!--<lightning:picklistPath aura:id="submissionPath" recordId="{!v.recordId}"-->
@@ -19,7 +19,7 @@
 
 	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="sectionConfiguration">
 
-		<c:DynamicFormSection sectionConfiguration="{!sectionConfiguration}" />
+		<c:gf_DynamicFormSection sectionConfiguration="{!sectionConfiguration}" />
 	</aura:iteration>
 
 </aura:component>

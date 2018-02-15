@@ -14,5 +14,5 @@
         <aura:attribute name="isBackground" type="Boolean"/>
     </aura:method>
 
-    <c:MajorUtils aura:id="MajorUtils"/>    
+    <c:gf_MajorUtils aura:id="MajorUtils"/>
 </aura:component>
