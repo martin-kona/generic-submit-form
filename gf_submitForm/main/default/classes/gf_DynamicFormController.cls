@@ -39,9 +39,8 @@ public with sharing class gf_DynamicFormController {
         	List<gf_DynamicFormSectionConfiguration> sectionConfigurations = new gf_DynamicFormHandler().getFormConfiguration(recordId);
             configurationWrapper = new gf_DynamicFormSectionConfigurationWrapper(true, gf_DynamicFormConstants.SUCCESS, sectionConfigurations);
         } catch (Exception e) {
-            configurationWrapper = new gf_DynamicFormSectionConfigurationWrapper(false, e.getMessage(), NULL);
 
-            // store rather log and return aura exception with user friendly message
+            throw new AuraHandledException(Label.gf_AuraExceptionMessage_userFriendly);
         }        
 
 		return configurationWrapper;
