@@ -11,5 +11,9 @@
 
         var sectionIcon = component.find('lockButton');
         $A.util.toggleClass(sectionIcon, 'fa-rotate-90');
+    },
+
+    handlePathSelect : function() {
+        
     }
 })
