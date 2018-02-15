@@ -10,22 +10,9 @@
 
 	<h1>Submit</h1>
 
-	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="formSection">
-        <!--TODO: create as reusable form section-->
-        <!--TODO: aura:id to be real custom metadata record id passed to cmp-->
-		<lightning:card aura:id="demoId" title="{!formSection.sectionName}" iconName="standard:account">
+	<aura:iteration items="{!v.formConfiguration.sectionConfigurations}" var="sectionConfiguration">
 
-			<aura:set attribute="actions">
-				<lightning:buttonIcon aura:id="lockButton" iconName="utility:switch" variant="bare"
-									  onclick="{!c.cardToggle}" alternativeText="minimize section" />
-			</aura:set>
-
-            <p aura:id="showHideSection">
-				<lightning:input type="number" name="number" label="Number" value="12345"/>
-				<lightning:input type="number" name="number" label="Number" value="12345"/>
-				<lightning:input type="number" name="number" label="Number" value="12345"/>
-            </p>
-		</lightning:card>	
+		<c:DynamicFormSection sectionConfiguration="{!sectionConfiguration}" />
 	</aura:iteration>
 
 </aura:component>

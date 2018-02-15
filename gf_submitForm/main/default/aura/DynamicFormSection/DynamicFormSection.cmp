@@ -1,8 +1,21 @@
 <aura:component >
 
-	<aura:attribute name="formConfiguration" type="Object" description="Data and security configuration"/>
+	<aura:attribute name="sectionConfiguration" type="Object" description="Data and security configuration"/>
 
-	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>	
+
+    <lightning:card aura:id="cardSection" title="{!v.sectionConfiguration.sectionName}" iconName="standard:account">
+
+        <aura:set attribute="actions">
+            <lightning:buttonIcon aura:id="lockButton" iconName="utility:switch" variant="bare"
+                                  onclick="{!c.cardToggle}" alternativeText="minimize section" />
+        </aura:set>
+
+        <p aura:id="showHideSection">
+            <lightning:input type="number" name="number" label="Number" value="12345"/>
+            <lightning:input type="number" name="number" label="Number" value="12345"/>
+            <lightning:input type="number" name="number" label="Number" value="12345"/>
+        </p>
+    </lightning:card>
 
 
 </aura:component>
