@@ -10,6 +10,6 @@
         $A.util.toggleClass(cardSection,'slds-is-collapsed');
 
         var sectionIcon = component.find('lockButton');
-        //$A.util.toggleClass(sectionIcon, 'fa-rotate-90');
+        $A.util.toggleClass(sectionIcon, 'fa-rotate-90');
     }
 })
